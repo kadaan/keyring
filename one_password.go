@@ -40,8 +40,8 @@ type onePasswordItem struct {
 }
 
 const onePasswordKeyNotFoundFragmentMessage = "isn't an item"
-const onePasswordItemCategory = "Secure Note"
-const onePasswordItemField = "notesPlain"
+const onePasswordItemCategory = "Password"
+const onePasswordItemField = "password"
 
 func (k *onePasswordKeyring) retrieveOnePasswordItem(key string) (onePasswordItem, error) {
 	args := []string{
