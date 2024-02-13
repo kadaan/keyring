@@ -49,6 +49,7 @@ func (k *onePasswordKeyring) retrieveOnePasswordItem(key string) (onePasswordIte
 		"get",
 		k.prefix + key,
 		"--format=json",
+		"--cache",
 	}
 
 	if k.account != "" {
@@ -160,6 +161,7 @@ func (k *onePasswordKeyring) Keys() ([]string, error) {
 		"item",
 		"list",
 		"--format=json",
+		"--cache",
 	}
 
 	if k.account != "" {
