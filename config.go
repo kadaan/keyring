@@ -56,6 +56,15 @@ type Config struct {
 	// WinCredPrefix is a string prefix to prepend to the key name
 	WinCredPrefix string
 
+	// UseBiometrics is whether to use biometrics (where available) to unlock the keychain
+	UseBiometrics bool
+
+	// TouchIDAccount is the name of the account that we store the unlock password in keychain
+	TouchIDAccount string
+
+	// TouchIDService is the name of the service that we store the unlock password in keychain
+	TouchIDService string
+
 	// OnePasswordAccount is the name of the 1Password account to use
 	OnePasswordAccount string
 
