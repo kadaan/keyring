@@ -425,7 +425,7 @@ func (k *keychain) setupTouchID() (string, error) {
 	item.SetLabel(fmt.Sprintf(touchIDLabel, k.path))
 	item.SetData([]byte(passphrase))
 	item.SetSynchronizable(gokeychain.SynchronizableNo)
-	item.SetAccessible(gokeychain.AccessibleWhenUnlocked)
+	item.SetAccessible(gokeychain.AccessibleAfterFirstUnlock)
 
 	debugf("Adding service=%q, account=%q to osx keychain %s", k.touchIDService, k.touchIDAccount, k.path)
 	if err := gokeychain.AddItem(item); err != nil {
